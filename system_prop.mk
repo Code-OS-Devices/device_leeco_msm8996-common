@@ -224,3 +224,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fastcharge
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.le_fast_chrg_enable=1
+
+# IMS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.volte_enabled_by_hw=1 \
+    persist.data.iwlan.enable=true
+
+
+#Enable device orientation sensor
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qti.sensors.dev_ori=false \
+    ro.qti.sensors.pmd=false \
+    ro.qti.sensors.sta_detect=false \
+    ro.qti.sensors.mot_detect=false
+
+#VENDOR_EDIT chenzhongping add it
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.ignore_dom_time=10 \
+    persist.vendor.radio.rat_on=combine \
+    persist.data.iwlan.enable=true \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.radio.efssync=true
